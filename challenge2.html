@@ -19,7 +19,7 @@
 
         <div>
           <label for ="home">Home Address:</label><br>
-          <label><input type="checkbox" name="useBilling" id="sameAddress"> Same as above</label>
+          <label><input type="checkbox" name="useBilling" id="sameAddress" onclick="fillIn()"> Same as above</label>
           <br>
           <textarea name="homeAdd" id="home"></textarea>
         </div>
@@ -29,5 +29,17 @@
     <p class = "alert">
     If you are using the starter code, there are two accessibility errors on this page.  Fix them!!</p>
     </main>
+    <script>
+      function fillIn(){
+        var home=document.querySelector("#home").value;
+        console.log(home);
+        var is_checked=document.querySelector("#sameAddress").checked;
+      console.log(is_checked);
+      if (is_checked==true){
+        document.querySelector("#home").innerHTML=home;
+      }
+      
+      }
+    </script>
   </body>
 </html>
