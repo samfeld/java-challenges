@@ -18,7 +18,7 @@
           <legend>Email subscriptions</legend>
           <div id="check">
             <label>
-              <input type="checkbox" name="subscribe" id="subscribe">
+              <input type="checkbox" name="subscribe" id="subscribe" onclick="openEmail()">
               Check to toggle the email field.
             </label>
           </div>
@@ -34,5 +34,18 @@
         </fieldset>
       </form>
   </main>
+  <script>
+    function openEmail(){
+      console.log("Made it");
+      var is_checked=document.querySelector("#subscribe").checked;
+      console.log(is_checked);
+      if (is_checked==true){
+        document.querySelector("#emailDiv").style.display="block";
+      }
+      else{
+        document.querySelector("#emailDiv").style.display="none";
+      }
+    }
+  </script>
   </body>
 </html>
